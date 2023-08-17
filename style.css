@@ -1,0 +1,150 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    /*color*/
+    --Soft-blue: hsl(215, 51%, 70%);
+    --Cyan: hsl(178, 100%, 50%);
+    
+    --Very-dark-blue-main-BG: hsl(217, 54%, 11%);
+    --Very-dark-blue-card-BG: hsl(216, 50%, 16%);
+    --Very-dark-blue-line: hsl(215, 32%, 27%);
+    --White: hsl(0, 0%, 100%);
+    
+    /*font*/
+    --Font-size: 18px;
+    --Font-family:'Outfit',sans-serif; 
+    --Font-Weight: 300;
+    --Font-Weight-med: 400;
+    --Font-Weight-bold: 600;
+
+    --border-radius:15px;
+}
+
+body{
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    place-items: center;
+    background-color: var(--Very-dark-blue-main-BG);
+    color: var(--Very-dark-blue-line);
+    font-family: var(--Font-family);
+    font-size: var(--Font-size);
+    font-weight: var(--Font-Weight-med);
+}
+
+main{
+    width: 300px;
+    height: auto;
+    padding: 15px;
+    background-color: var(--Very-dark-blue-card-BG);
+    border-radius: var(--border-radius);
+    display: grid;
+    gap: 20px;
+    box-shadow: -15px 30px 10px hsl(215, 48%, 10%),
+                15px 30px 10px hsl(215, 48%, 10%);
+} 
+
+h1,h3{
+    font-weight: var(--Font-Weight-bold);
+}
+
+h1{
+    color: var(--White);
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: all 0.15s;
+}
+
+h1:hover{
+    color: var(--Cyan);
+}
+
+h3{
+    color: var(--Cyan);
+    font-size: .9rem;
+}
+
+.image-equilibrium{
+    width: 100%;
+    border-radius: var(--border-radius);
+}
+
+.image{
+    position: relative;
+}
+
+.view{
+    display: grid;
+    place-items: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    height: 100%;
+    width: 100%;
+    border-radius: var(--border-radius);
+    background-color: var(--Cyan);
+    opacity: 0;
+    cursor: pointer;
+    transition: all 0.15s;
+}
+
+.view:hover{
+    opacity: 0.6;
+}
+
+.equilibrium{
+    display: grid;
+    grid-template-columns: 1fr .5fr 1fr
+}
+
+.equ{
+    display: grid;
+    grid-template-columns: 20px 1fr;
+    align-items: center;
+    gap: 3px;
+}
+
+.equ p{
+    font-weight: var(--Font-Weight-med);
+}
+
+.days{
+    grid-column: 3/4;
+}
+
+.creator{
+    display: grid;
+    grid-template-columns: 50px 1fr;
+    border-top: 1.5px solid var(--Very-dark-blue-line);
+    align-items: center;
+    height: 70px;
+}
+
+.avatar{
+    width: 80%;
+    border: 1.5px solid var(--White);
+    border-radius:100% ;
+}
+
+span{
+    font-weight: var(--Font-Weight-med);
+    color: var(--White);
+    cursor: pointer;
+    transition: all 0.15s;
+}
+
+span:hover{
+    color: var(--Cyan);
+}
+@media (max-width:350px){
+    main{
+        width: 90%;
+    }
+}
